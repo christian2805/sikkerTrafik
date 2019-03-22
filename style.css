@@ -1,9 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
 body {
     margin: 0;
 
 }
-
-
 
 h1 {
     font-family: 'PT Sans', sans-serif;
@@ -12,3 +16,31 @@ h1 {
 p {
     font-family: 'Open Sans', sans-serif;
 }
+
+/*Section css*/
+#section1 {
+    min-width: 100vw;
+    min-height: 20vw;
+    background-color: aliceblue;
+}
+
+#section2 {
+    min-width: 100vw;
+    min-height: 20vw;
+    background-color: gainsboro;
+}
+
+#section3 {
+    min-width: 100vw;
+    min-height: 20vw;
+    background-color: aliceblue;
+}
+
+#section4 {
+    min-width: 100vw;
+    min-height: 20vw;
+    background-color: gainsboro;
+}
+
+
+/*Section css slut*/
