@@ -5,11 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Har du 9 liv?</title>
+    <meta name="robots" content="noindex">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
-
+    <meta name="Har du 9 liv?" content="Rådet for sikker trafik, video om sikkerhed på cykel">
 
 </head>
 
@@ -17,16 +18,62 @@
 
 
 
-    <h1> Rådet for sikker trafik</h1>
+
     <wrapper>
-        <section id="section1">
+        <video id="splashVid" autoplay loop muted title="Har du 9 liv?">
+            <source src="video/baggrund.mp4">
+        </video>
+        <section id="section1" class="sections">
+            <img class="logo" src="imgs/logo.png" alt="Rådet for sikker trafik logo">
+            <article class="leftarticle">
+                <h2 class="h2">Hygge på Cykel</h2>
+                <p>
+
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam unde dolor obcaecati in, nemo saepe, omnis sequi, ducimus dignissimos eaque consequatur cum distinctio, quia soluta ullam recusandae sed mollitia vitae!</p>
+            </article>
+            <article class="rightarticle">
+                <img src="imgs/par.jpg" class="img" alt="Ældre par på cykel">
+            </article>
         </section>
-        <section id="section2">
+
+        <section id="section2" class="sections">
+            <img class="logo" src="imgs/logo.png" alt="Rådet for sikker trafik logo">
+            <article class="leftarticle">
+                <h2 class="h2">Hygge på Cykel</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, tempora consectetur! Maxime iste assumenda cumque labore corporis consequuntur natus aspernatur expedita! Aliquam labore inventore voluptates. Magnam cupiditate doloribus iste a!</p>
+            </article>
+            <article class="rightarticle">
+                <img src="imgs/par2.jpg" class="img" alt="Ældre par på cykel">
+            </article>
         </section>
-        <section id="section3">
+        <section id="section3" class="sections">
+            <img class="logo" src="imgs/logo.png" alt="Rådet for sikker trafik logo">
+            <h2 id="videoh2">Videoen spiller supa</h2>
+            <video controls>
+                <source src="video/Sequence%2001.mp4"></video>
         </section>
-        <section id="section4">
+        <section id="section4" class="sections">
+            <img class="logo" src="imgs/logo.png" alt="Rådet for sikker trafik logo">
+            <article class="leftarticle">
+                <h2 class="h2">Hygge på Cykel</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quam sunt illum beatae enim nulla ab minus pariatur, veniam quis culpa iure natus assumenda debitis, sint. Nesciunt, laboriosam nam quasi.</p>
+            </article>
+            <article class="rightarticle">
+                <div id="svgcontainer">
+                    <svg id="cirkel" viewbox="0 0 100 100">
+                        <circle id="pie1" r="50" cx="50" cy="50" />
+                        <circle id="pie2" r="50" cx="50" cy="50" />
+                        <circle id="pie3" r="50" cx="50" cy="50" />
+                        <circle id="pie4" r="50" cx="50" cy="50" />
+                        <circle id="pie5" r="50" cx="50" cy="50" />
+                        <circle id="pie6" r="50" cx="50" cy="50" />
+
+
+                    </svg>
+                </div>
+            </article>
         </section>
+
     </wrapper>
 
 
@@ -35,7 +82,16 @@
 
 
 
+    <footer>
+        <div id="footercontainer">
+            <ul id="ful">
+                <li class="fli"><img class="some" src="imgs/facebook.svg"></li>
+                <li class="fli"><img class="some" id="instasome" src="imgs/instagram4.svg"></li>
+            </ul>
+        </div>
 
+
+    </footer>
 
     <script src="script.js"></script>
 </body>

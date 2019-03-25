@@ -3,44 +3,320 @@
     padding: 0;
 }
 
+html {
+    margin: 0;
+}
 
 body {
     margin: 0;
 
 }
 
-h1 {
+h1,
+h2 {
     font-family: 'PT Sans', sans-serif;
+
 }
 
+.h2 {
+    padding: 50px 30px 20px 20px;
+}
+
+#splashVid {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+}
+
+#videoh2 {
+    margin: 0 auto;
+    padding: 50px 30px 20px 20px;
+
+}
+
+
 p {
+    padding: 15px;
     font-family: 'Open Sans', sans-serif;
 }
 
-/*Section css*/
-#section1 {
-    min-width: 100vw;
-    min-height: 20vw;
-    background-color: aliceblue;
+.img {
+    margin: auto 0;
+    max-width: 100%;
+    padding-top: 50px
 }
 
-#section2 {
-    min-width: 100vw;
-    min-height: 20vw;
-    background-color: gainsboro;
+video {
+    width: 100%;
+    height: 40vh;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 5px;
+    padding-top: 5px;
+}
+
+/*Section css*/
+.sections {
+    max-width: 100vw;
+    max-height: 150vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sections:first-child {}
+
+.sections:nth-child(even) {
+    background-color: lightgray;
+}
+
+.sections:nth-child(odd) {
+    background-color: white;
 }
 
 #section3 {
-    min-width: 100vw;
-    min-height: 20vw;
-    background-color: aliceblue;
+    text-align: center;
+    height: 100vh;
 }
 
-#section4 {
-    min-width: 100vw;
-    min-height: 20vw;
-    background-color: gainsboro;
+
+.leftarticle {
+    width: 50vw;
+    height: 50vh;
+    display: inline-block;
+    text-align: center;
+    flex-basis: 300px;
+
+
 }
 
+.rightarticle {
+
+    vertical-align: middle;
+    text-align: center;
+    height: 50vh;
+    width: 50vw;
+
+    flex-basis: 300px;
+}
 
 /*Section css slut*/
+
+
+
+/*--------------------------Piechart----------------------------*/
+#svgcontainer {
+    width: 40vw;
+    height: auto;
+    margin: 0 auto;
+}
+
+#cirkel {
+    background: #9999;
+    border-radius: 50%;
+    transform: rotate(-90deg);
+}
+
+#pie1 {
+    stroke-width: 100;
+    stroke: #FFE8A3;
+    fill: none;
+    stroke-dasharray: 76 314;
+    /*        stroke-dashoffset:;*/
+
+    transition: all 2.5s ease-in-out;
+
+    &:hover {
+        transform: rotate(-260deg);
+    }
+}
+
+
+
+#pie2 {
+    stroke-width: 100;
+    stroke: #576;
+    fill: none;
+    stroke-dasharray: 76 314;
+    stroke-dashoffset: -76;
+
+
+}
+
+#pie3 {
+    stroke-width: 100;
+    stroke: yellow;
+    fill: none;
+    stroke-dasharray: 30 314;
+    /*        2 * 76 = 152  */
+    stroke-dashoffset: -152;
+
+}
+
+#pie4 {
+    stroke-width: 100;
+    stroke: red;
+    fill: none;
+    stroke-dasharray: 40 314;
+    stroke-dashoffset: -182;
+
+}
+
+#pie5 {
+    stroke-width: 100;
+    stroke: blue;
+    fill: none;
+    stroke-dasharray: 50 314;
+    stroke-dashoffset: -222;
+}
+
+#pie6 {
+    stroke-width: 100;
+    stroke: black;
+    fill: none;
+    stroke-dasharray: 50 314;
+    stroke-dashoffset: -272;
+}
+
+
+
+/*------------------------Piechart SLUT------------------------*/
+footer {
+    width: 100%;
+    height: 50vh;
+    background-color: #28292d;
+}
+
+.logofooter {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    left: 35vw;
+    top: 65vw;
+}
+
+.some {
+    width: 15vw;
+    padding: 10px;
+
+}
+
+
+#ful .fli {
+    list-style-type: none;
+    display: inline;
+
+}
+
+#footercontainer {
+    padding: 10vw;
+
+}
+
+
+
+/*------------------------@Media-----------------------*/
+@media(min-width:400px) {
+
+
+    video {
+        width: 100%;
+        height: 42vh;
+        margin: 0 auto;
+    }
+
+    #svgcontainer {
+        margin-top: 12vw;
+    }
+
+
+    .h2 {
+        margin-top: 11vw;
+    }
+
+    .img {
+        margin-top: 11vw;
+    }
+
+    .leftarticle {
+        padding-left: 40px;
+        min-width: 40vw;
+    }
+
+    .rightarticle {
+        padding-right: 40px;
+        min-width: 40vw;
+    }
+
+    .sections {
+        justify-content: space-between;
+    }
+
+    #section3 {
+        text-align: center;
+        height: 100vh;
+
+    }
+
+    footer {
+        height: 40vh;
+    }
+
+    .logofooter {
+        position: relative;
+        top: 33vw;
+        left: 54vw;
+    }
+
+}
+
+@media(min-width:900px) {
+    .img {
+        margin-top: 5vw;
+        padding-top: 0;
+    }
+
+    .sections {
+        height: 90vh;
+    }
+
+    .h2 {
+        margin-top: 5vw;
+    }
+
+    .h2 {
+        padding: 0;
+    }
+
+    footer {
+        height: 40vh;
+    }
+
+    .logofooter {
+        position: relative;
+        top: 15vw;
+        left: 94vw;
+    }
+
+    .rightarticle {
+        padding-right: 0px;
+        min-width: 40vw;
+    }
+
+    #svgcontainer {
+        margin-top: 5vw;
+        width: 30vw;
+    }
+
+    video {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
