@@ -12,34 +12,67 @@ body {
 
 }
 
-h1,
-h2 {
-    font-family: 'PT Sans', sans-serif;
+#everythingWrapper {
+    max-width: 1000px;
+}
 
+h1,
+h2,
+h3 {
+    font-family: 'Unica One', cursive;
+    text-transform: uppercase;
+    font-size: 30pt;
+    margin-bottom: 2rem;
+
+}
+
+h4 {
+    font-size: 20pt;
+    font-family: 'Unica One', cursive;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    margin-top: -0.7rem;
+
+}
+
+h5 {
+    font-size: 15pt;
+    font-family: 'Unica One', cursive;
+    text-transform: uppercase;
+    margin: 3rem 0 2rem 0;
+}
+
+li {
+    font-family: 'Raleway', cursive;
+    margin-top: 2rem;
+}
+
+::selection {
+    background: #3f0;
+    color: #373d46;
+    text-shadow: none;
 }
 
 .h2 {
     padding: 50px 30px 20px 20px;
 }
 
+#section1 li {
+    font-weight: bold;
+    font-style: italic;
+}
+
 #splashVid {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    margin: 0;
-
+    margin-top: 26vw;
+    z-index: 1;
 }
-
-#videoh2 {
-    margin: 0 auto;
-    padding: 50px 30px 20px 20px;
-
-}
-
 
 p {
-    padding: 15px;
-    font-family: 'Open Sans', sans-serif;
+
+    font-family: 'Raleway', sans-serif;
 }
 
 .img {
@@ -55,14 +88,255 @@ video {
 }
 
 .logo {
-    width: 70px;
-    height: 70px;
+    width: 50px;
     position: absolute;
     left: 5px;
-    padding-top: 5px;
+
 }
 
-/*Section css*/
+body {
+    margin: 0;
+}
+
+ul {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+hr {
+    opacity: 0.1;
+    color: #5e6483;
+    margin-left: -1rem;
+}
+
+header a,
+a:visited,
+a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: lightgray;
+}
+
+#section5 a {
+    background-color: rgb(108, 234, 108);
+    border-radius: 20px;
+}
+
+#section5 input {
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+/**********HEADER************/
+
+.header {
+    background-color: #28292D;
+    width: 100vw;
+    height: auto;
+    font-size: 20px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    z-index: 8;
+    min-height: 15vh;
+}
+
+.desktopNav:hover,
+a:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.desktopNav {
+    font-family: 'Unica One', cursive;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.desktopNav a {
+    letter-spacing: -0.05em;
+    text-align: center;
+    min-width: 95px;
+    font-size: 0.9rem;
+    padding: 3.7rem 0.6rem 0 0.6rem;
+    display: inline-block;
+}
+
+#searchIcon {
+    width: 23px;
+}
+
+.logo img {
+    display: inline-flex;
+    width: 170px;
+    padding: 1rem;
+    z-index: 9;
+}
+
+/****** BURGER MENU **********/
+
+.burgerContainer {
+    display: inline-block;
+    cursor: pointer;
+    padding: 2.5rem 2rem 0.5rem 0;
+    position: fixed;
+    right: 0;
+    z-index: 9;
+
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: lightgray;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+/*******DROPDOWN MENU*************/
+
+.dropDownItems {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    padding: 10rem 2rem 2rem 1rem;
+    font-family: 'Unica One', cursive;
+    text-transform: uppercase;
+    position: absolute;
+    left: 0;
+    background-color: #28292D;
+}
+
+.dropDownItems li {
+    padding: 0.9rem;
+}
+
+
+/*****MOBILE QUERY******/
+@media screen and (max-width: 1023px) {
+    .desktopNav {
+        display: none;
+    }
+
+    .dropDownItems a {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .dropDownItems a p {
+        display: inline;
+        margin: 0;
+        margin-right: 3rem;
+        padding: 0;
+        font-family: 'Unica One', cursive;
+    }
+
+    .plusIcon {
+        color: #4faf69;
+    }
+}
+
+/****DESKTOP QUERY*****/
+@media screen and (min-width: 1024px) {
+    .burgerContainer {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 1130px) {
+
+
+    .desktopNav a {
+        letter-spacing: -0.05em;
+        text-align: center;
+        min-width: 95px;
+        font-size: 1.2rem;
+        padding: 3.7rem 0.6rem 0 0.6rem;
+        display: inline-block;
+    }
+
+    a:hover {
+        background-color: #363D47;
+        text-shadow: 0 0 2px white;
+    }
+}
+
+/***IPAD QUERY****/
+/*
+@media screen and (min-width: 768px) {
+
+    .dropDownItems {
+        font-size: 40px;
+        padding-top: 5rem;
+        padding-left: 0;
+    }
+}
+*/
+
+/**************DROPDOWN NAV**************/
+.dropdownContainer {
+    position: relative;
+    display: inline-block;
+    font-family: 'Unica One', cursive;
+}
+
+.dropDown {
+    color: lightgray;
+    padding: 16px;
+    border: none;
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    margin-top: 0.3rem;
+    background-color: #363D47;
+    min-width: 165px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdownContent a {
+    color: lightgray;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdownContent a:hover {
+    background-color: #363D47;
+}
+
+.dropdownContainer:hover .dropdownContent {
+    display: block;
+}
+
+
+/*---------------------------------Section css*----------------------------*/
 .sections {
     max-width: 100vw;
     max-height: 150vh;
@@ -82,40 +356,113 @@ video {
 }
 
 #section3 {
+    /*
     text-align: center;
+*/
     height: 100vh;
+
 }
 
+#section3 h2 {
+    margin: 0;
+    padding: 0;
+}
+
+#kampagneVideo {
+    margin: 10rem auto;
+}
+
+#section5 {
+    min-height: 150vh;
+}
+
+#section5 button {
+    background-color: grey;
+    border-radius: 21px;
+}
+
+/*
+#section5 .leftarticle {
+    text-align: left;
+    padding: 2vw;
+    padding-top: 6vw;
+}
+
+#section5 h2 {
+    padding-left: 1vw;
+}
+
+#section5 .rightarticle {
+
+    padding: 2vw;
+}*/
+
+
+.inputmail {
+    padding: 15px;
+}
+
+#section6 {
+    min-height: 160vh;
+    align-content: center;
+}
 
 .leftarticle {
-    width: 50vw;
-    height: 50vh;
+    /*    width: 45vw;
+    height: 50vh;*/
     display: inline-block;
-    text-align: center;
     flex-basis: 300px;
-
-
 }
 
 .rightarticle {
-
+    display: inline-block;
     vertical-align: middle;
     text-align: center;
     height: 50vh;
-    width: 50vw;
+    width: 45vw;
 
     flex-basis: 300px;
 }
 
-/*Section css slut*/
+/*------------------------------Section css slut--------------------*/
+/*-------------------------- DE NI BUD --------------------------*/
+#section4 h2 {
+    padding-top: 20vw;
+}
+
+#section4 img {
+    max-height: 30vw;
+    margin: auto 0;
+}
 
 
+
+#section4 {}
+
+
+.bud {
+
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    border-top: solid #707070;
+    margin: 2vw;
+    padding: 2vw;
+    align-content: center;
+}
+
+#section4 h2 {
+    text-align: center;
+    font-size: 3rem;
+
+}
+
+
+/*-------------------------- DE NI BUD  SLUT! -----------------------*/
 
 /*--------------------------Piechart----------------------------*/
 #svgcontainer {
-    width: 40vw;
+    width: 100%;
     height: auto;
-    margin: 0 auto;
 }
 
 #cirkel {
@@ -126,73 +473,317 @@ video {
 
 #pie1 {
     stroke-width: 100;
-    stroke: #FFE8A3;
+    stroke: #54b948;
     fill: none;
-    stroke-dasharray: 76 314;
-    /*        stroke-dashoffset:;*/
+    stroke-dasharray: 150 314;
 
-    transition: all 2.5s ease-in-out;
-
-    &:hover {
-        transform: rotate(-260deg);
-    }
 }
-
-
 
 #pie2 {
     stroke-width: 100;
-    stroke: #576;
+    stroke: grey;
     fill: none;
-    stroke-dasharray: 76 314;
-    stroke-dashoffset: -76;
+    stroke-dasharray: 150 314;
+    stroke-dashoffset: -150;
 
 
 }
 
 #pie3 {
     stroke-width: 100;
-    stroke: yellow;
+    stroke: black;
     fill: none;
     stroke-dasharray: 30 314;
     /*        2 * 76 = 152  */
-    stroke-dashoffset: -152;
+    stroke-dashoffset: -300;
 
 }
 
-#pie4 {
-    stroke-width: 100;
-    stroke: red;
-    fill: none;
-    stroke-dasharray: 40 314;
-    stroke-dashoffset: -182;
-
+#boxGrøn {
+    width: 10px;
+    height: 10px;
+    background-color: #54b948;
+    display: inline-block;
 }
 
-#pie5 {
-    stroke-width: 100;
-    stroke: blue;
-    fill: none;
-    stroke-dasharray: 50 314;
-    stroke-dashoffset: -222;
+#boxGrå {
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    display: inline-block;
 }
 
-#pie6 {
-    stroke-width: 100;
-    stroke: black;
-    fill: none;
-    stroke-dasharray: 50 314;
-    stroke-dashoffset: -272;
+#boxSort {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    display: inline-block;
 }
 
+.PieP {
+    display: inline-block;
+    padding: 0 10px 0 0;
+
+}
 
 
 /*------------------------Piechart SLUT------------------------*/
+/*---------------------------------Bar Chart--------------------*/
+.container {
+    width: 100%;
+
+}
+
+#barchart {
+    border: 1px solid #716e6e;
+    margin-top: 3.3rem;
+}
+
+#barchart svg {}
+
+.line {
+    stroke: #716e6e;
+}
+
+.maal {
+    stroke-width: 1.1vw;
+    stroke: #54b948;
+}
+
+.graf-text {
+    font-size: 0.6rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+/*---------------------------------Bar Chart Slut--------------------*/
+
+.hide {
+    display: none;
+}
+
+/************************ GENERELT QUIZ **********************************/
+
+.graphic {
+    background-image: url(svg/biketrack.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 16vw;
+    top: 29vw;
+    z-index: 2;
+
+}
+
+.questionbox {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 30vw;
+    height: 32vw;
+    top: 10vw;
+    left: 15vw;
+}
+
+.option1 {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 25vw;
+    height: 10vw;
+    top: 10vw;
+    left: 50vw
+}
+
+.option2 {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 25vw;
+    height: 10vw;
+    top: 20vw;
+    left: 50vw
+}
+
+.option3 {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 25vw;
+    height: 10vw;
+    top: 30vw;
+    left: 50vw;
+    z-index: 5;
+}
+
+.wintextbox {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 30vw;
+    height: 32vw;
+    top: 10vw;
+    left: 15vw;
+}
+
+.losetextbox {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 30vw;
+    height: 32vw;
+    top: 10vw;
+    left: 15vw;
+}
+
+.infographic {
+    background-image: url(svg/question2.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 30vw;
+    height: 24vw;
+    top: 10vw;
+    left: 50vw;
+}
+
+.button {
+    background-image: url(svg/button.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 10vw;
+    height: 5vw;
+    top: 34vw;
+    left: 50vw;
+    z-index: 6;
+}
+
+.buttonlose {
+    background-image: url(svg/button.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 10vw;
+    height: 5vw;
+    top: 34vw;
+    left: 50vw;
+    z-index: 6;
+}
+
+
+/************************ QUIZ 1 **********************************/
+
+#quiz1 {
+    position: relative;
+    background-image: url(svg/background.svg);
+    background-size: cover;
+    width: 100%;
+    height: 45vw;
+    overflow: hidden;
+}
+
+#quiz1 .questionbox {
+    background-image: url(svg/question1.svg);
+}
+
+#quiz1 .option1 {
+    background-image: url(svg/option1_1.svg);
+}
+
+#quiz1 .option2 {
+    background-image: url(svg/option2_1.svg);
+}
+
+#quiz1 .option3 {
+    background-image: url(svg/option3_1.svg);
+}
+
+#quiz1 .losetextbox {
+    background-image: url(svg/wintext1.svg);
+}
+
+#quiz1 .wintextbox {
+    background-image: url(svg/wintext1.svg);
+}
+
+#quiz1 .infographic {
+    background-image: url(svg/background.svg);
+    top: 5vw;
+}
+
+#quiz1 .button {
+    left: 20vw;
+}
+
+#quiz1 .buttonlose {
+    left: 20vw;
+}
+
+/************************ QUIZ 2 **********************************/
+
+#quiz2 {
+    position: relative;
+    background-image: url(svg/background.svg);
+    background-size: cover;
+    width: 100%;
+    height: 45vw;
+    overflow: hidden;
+
+}
+
+#quiz2 .questionbox {
+    background-image: url(svg/question2.svg);
+}
+
+#quiz2 .option1 {
+    background-image: url(svg/option1_2.svg);
+}
+
+#quiz2 .option2 {
+    background-image: url(svg/option2_2.svg);
+}
+
+#quiz2 .option3 {
+    background-image: url(svg/option3_2.svg);
+}
+
+#quiz2 .losetextbox {
+    background-image: url(svg/wintext2.svg);
+}
+
+#quiz2 .wintextbox {
+    background-image: url(svg/wintext2.svg);
+}
+
+#quiz2 .infographic {
+    background-image: url(svg/background.svg);
+}
+
+
+
+
+
+
+
+#bartxt {
+    padding-top: 10vh;
+}
+
+#korttxt {
+    display: block;
+}
+
 footer {
     width: 100%;
     height: 50vh;
     background-color: #28292d;
 }
+
+footer p {
+    color: rgba(255, 255, 255, 0.77);
+}
+
 
 .logofooter {
     width: 70px;
@@ -204,7 +795,6 @@ footer {
 
 .some {
     width: 15vw;
-    padding: 10px;
 
 }
 
@@ -215,16 +805,29 @@ footer {
 
 }
 
-#footercontainer {
-    padding: 10vw;
-
-}
-
-
-
 /*------------------------@Media-----------------------*/
 @media(min-width:400px) {
+    .header {
+        min-height: 10vh;
+    }
 
+    #splashVid {
+        margin-top: 13vw
+    }
+
+    #langtxt p {
+        display: block;
+        font-family: 'Unica One', cursive;
+    }
+
+    #langtxt {
+        margin-top: 10vw;
+        margin-left: 3.5rem;
+    }
+
+    #korttxt {
+        display: none;
+    }
 
     video {
         width: 100%;
@@ -243,6 +846,7 @@ footer {
 
     .img {
         margin-top: 11vw;
+        max-width: 100%;
     }
 
     .leftarticle {
@@ -262,8 +866,17 @@ footer {
     #section3 {
         text-align: center;
         height: 100vh;
-
     }
+
+    #section5 {
+        min-height: 65vh;
+    }
+
+    #section6 {
+        min-height: 85vh;
+    }
+
+
 
     footer {
         height: 40vh;
@@ -275,12 +888,61 @@ footer {
         left: 54vw;
     }
 
+    .nibud {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bud {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #footercontainer {
+        padding: 10px;
+        padding-top: 14rem;
+        padding-left: 2rem;
+
+    }
+
+    .some {
+        width: 10vw;
+
+    }
+
+    .logo {
+        width: 80px;
+    }
 }
 
+/************************ DESKTOP *************************/
+
 @media(min-width:900px) {
+    #splashVid {
+        margin-top: 5vw;
+        ;
+    }
+
     .img {
         margin-top: 5vw;
         padding-top: 0;
+    }
+
+    #langtxt {
+        display: inline-block;
+        position: absolute;
+        margin: 7rem 0 0 18.5rem;
+        display: none;
+    }
+
+    .langtxt {
+        font-family: 'Unica One', cursive;
+
+    }
+
+    #korttxt {
+        display: none;
     }
 
     .sections {
@@ -295,6 +957,20 @@ footer {
         padding: 0;
     }
 
+
+    #section5 {
+        min-height: 20vh;
+    }
+
+
+    #section6 {
+        min-height: 100vh;
+    }
+
+    #section4 h2 {
+        padding-top: 7vw;
+    }
+
     footer {
         height: 40vh;
     }
@@ -306,17 +982,109 @@ footer {
     }
 
     .rightarticle {
-        padding-right: 0px;
-        min-width: 40vw;
+        padding-right: 50px;
+    }
+
+    .leftarticle {
+        padding-left: 300px;
+        min-width: 30%;
     }
 
     #svgcontainer {
         margin-top: 5vw;
-        width: 30vw;
+        width: 50%;
     }
 
-    video {
+    /*  video {
         width: 100%;
         margin: 0 auto;
+    }*/
+
+
+    .nibud {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
+
+    .bud {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-content: center;
+    }
+
+    .nibud img {
+        max-width: 16vw;
+    }
+
+    .some {
+        max-height: 8vh;
+    }
+
+    .event {
+        border-radius: 22px;
+        background-color: #ffffff;
+        border: none;
+        margin-top: 2rem;
+    }
+
+
+    .budImg {
+        padding: 5rem;
+    }
+
+    .logo {
+        width: 100px;
+        margin-left: 3rem;
+    }
+
+    .latxt {
+        font-size: 25pt;
+    }
+
+    #section1 .img {
+        width: 600px;
+        position: absolute;
+        right: 10vw;
+    }
+
+    #section5 p {
+        font-size: 25pt;
+        margin-top: 2rem;
+    }
+
+    #section5 input {
+        border-radius: 20px;
+        margin-right: 20px;
+        width: 295px;
+    }
+
+    #section5 a {
+        background-color: rgb(108, 234, 108);
+        border-radius: 20px;
+    }
+
+    #footercontainer {
+        padding: 5vw;
+    }
+
+    .footerContent {
+        position: relative;
+        bottom: -75px;
+    }
+}
+
+
+
+/*-------------------------- VideoPortfolio --------------------*/
+button a {
+    background-color: #d9d9d9;
+    border: none;
+    color: #434343;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
 }
