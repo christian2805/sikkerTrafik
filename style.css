@@ -83,6 +83,10 @@ p {
     font-family: 'Raleway', sans-serif;
 }
 
+.dropDownItems li {
+    border-bottom: 1px solid #cecece;
+}
+
 .img {
     margin: auto 0;
     max-width: 100%;
@@ -214,7 +218,7 @@ a:hover {
 }
 
 .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+
     transform: rotate(-45deg) translate(-9px, 6px);
 }
 
@@ -223,7 +227,7 @@ a:hover {
 }
 
 .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+
     transform: rotate(45deg) translate(-8px, -8px);
 }
 
@@ -240,6 +244,13 @@ a:hover {
     position: absolute;
     left: 0;
     background-color: #28292D;
+}
+
+@media screen and (max-width: 380px) {
+
+    padding: 3rem 2rem 2rem 1rem;
+
+}
 }
 
 .dropDownItems li {
@@ -373,7 +384,7 @@ a:hover {
 }
 
 .section4 {
-    background-color: lightgray;
+    background-color: white;
 }
 
 #section3 {
@@ -407,7 +418,7 @@ a:hover {
 }
 
 #section5 button {
-    background-color: grey;
+    background-color: rgb(108, 234, 108);
     border-radius: 21px;
 }
 
@@ -497,18 +508,18 @@ a:hover {
 /*-------------------------- DE NI BUD  SLUT! -----------------------*/
 
 /*--------------------------Piechart----------------------------*/
-#svgcontainer {
+.svgcontainer {
     width: 100%;
     height: auto;
 }
 
-#cirkel {
+.cirkel {
     background: #9999;
     border-radius: 50%;
     transform: rotate(-90deg);
 }
 
-#pie1 {
+.pie1 {
     stroke-width: 100;
     stroke: #54b948;
     fill: none;
@@ -516,7 +527,7 @@ a:hover {
 
 }
 
-#pie2 {
+.pie2 {
     stroke-width: 100;
     stroke: grey;
     fill: none;
@@ -526,7 +537,7 @@ a:hover {
 
 }
 
-#pie3 {
+.pie3 {
     stroke-width: 100;
     stroke: black;
     fill: none;
@@ -571,12 +582,12 @@ a:hover {
 
 }
 
-#barchart {
+.barchart {
     border: 1px solid #716e6e;
     margin-top: 3.3rem;
 }
 
-#barchart svg {}
+.barchart svg {}
 
 .line {
     stroke: #716e6e;
@@ -1085,7 +1096,7 @@ footer p {
     }
 
 
-    #svgcontainer {
+    .svgcontainer {
         margin-top: 5vw;
         width: 50%;
     }
@@ -1187,6 +1198,11 @@ footer p {
         font-size: 40pt;
     }
 
+    #section1 {
+        height: 35vw;
+
+    }
+
     .quiz {
         font-size: 50pt;
     }
@@ -1232,8 +1248,8 @@ footer p {
 
 
 /*-------------------------- VideoPortfolio --------------------*/
-button a {
-    background-color: #d9d9d9;
+.a button {
+    background-color: rgb(108, 234, 108);
     border: none;
     color: #434343;
     padding: 15px 32px;
